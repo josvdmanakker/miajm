@@ -89,4 +89,34 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <feature name="Microphone">
+        <param name="ios-package" value="Microphone" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="ChromeStorage">
+        <param name="ios-package" value="ChromeStorage" />
+    </feature>
+    <feature name="ChromeAppWindow">
+        <param name="ios-package" value="ChromeAppWindow" />
+    </feature>
+    <feature name="ChromeBootstrap">
+        <param name="ios-package" value="ChromeBootstrap" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="ChromeExtensionURLs">
+        <param name="ios-package" value="ChromeExtensionURLs" />
+        <param name="onload" value="true" />
+    </feature>
+    <access origin="chrome-extension://*" />
+    <preference name="KeyboardDisplayRequiresUserAction" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <feature name="Keyboard">
+        <param name="ios-package" onload="true" value="IonicKeyboard" />
+    </feature>
+    <feature name="Vibration">
+        <param name="ios-package" value="CDVVibration" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
 </widget>

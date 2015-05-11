@@ -39,6 +39,17 @@
 		7E7966E61810823500FA85AD /* icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DC1810823500FA85AD /* icon-small.png */; };
 		7E7966E71810823500FA85AD /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DD1810823500FA85AD /* icon-small@2x.png */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
+		801FB5FB4CA142C99FC78A46 /* Microphone.m in Sources */ = {isa = PBXBuildFile; fileRef = 3374B9897889474192B1AF15 /* Microphone.m */; };
+		8ADDEF52258A4D0EA9D6B663 /* ChromeStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9B32C7CC394C88AC89BB65 /* ChromeStorage.m */; };
+		763EF77F6B7941DFA6CC9A26 /* ChromeAppWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7571E443E9414EA2D21FC8 /* ChromeAppWindow.m */; };
+		212FEC9F56C24217864AF800 /* ChromeBootstrap.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5756CB8A0B43E6B30A14F2 /* ChromeBootstrap.m */; };
+		929E6DE44E884EEA9A78E70C /* ChromeExtensionURLs.m in Sources */ = {isa = PBXBuildFile; fileRef = 23914EE86C70439B8FEDBFCB /* ChromeExtensionURLs.m */; };
+		0AEB7373F978411EB1DB089A /* IonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2507404735DC40CF9E2CF130 /* IonicKeyboard.m */; };
+		B165AAF76C5B4ABB9349682F /* UIWebViewExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E520F07F99B1406BBA883937 /* UIWebViewExtension.m */; };
+		8202F1D3D8474193A002AC5E /* CDVVibration.m in Sources */ = {isa = PBXBuildFile; fileRef = 307A5344987546498D749220 /* CDVVibration.m */; };
+		2F532159635741C6AC9D4131 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DAF9EE8E09840DEB8356AC6 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		735383442676452B8EB7FDB5 /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = C05B9FAD016D4EABBCAEB8AF /* CDVLocation.m */; };
+		06895D4D53C040448C4907C8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 826E44D2407941ACA5737BC0 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +115,23 @@
 		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "Hello World/config.xml"; sourceTree = "<group>"; };
+		3374B9897889474192B1AF15 /* Microphone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Microphone.m"; path = "com.voicekick.cordova.microphone/Microphone.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		CBED3922A58E435CACB18CF2 /* Microphone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Microphone.h"; path = "com.voicekick.cordova.microphone/Microphone.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		BB9B32C7CC394C88AC89BB65 /* ChromeStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "ChromeStorage.m"; path = "org.chromium.storage/ChromeStorage.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		08C1180447124DF79A86EDE2 /* ChromeStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ChromeStorage.h"; path = "org.chromium.storage/ChromeStorage.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		5E7571E443E9414EA2D21FC8 /* ChromeAppWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "ChromeAppWindow.m"; path = "org.chromium.bootstrap/ChromeAppWindow.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		DA5756CB8A0B43E6B30A14F2 /* ChromeBootstrap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "ChromeBootstrap.m"; path = "org.chromium.bootstrap/ChromeBootstrap.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		23914EE86C70439B8FEDBFCB /* ChromeExtensionURLs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "ChromeExtensionURLs.m"; path = "org.chromium.bootstrap/ChromeExtensionURLs.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		2507404735DC40CF9E2CF130 /* IonicKeyboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "IonicKeyboard.m"; path = "com.ionic.keyboard/IonicKeyboard.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		E520F07F99B1406BBA883937 /* UIWebViewExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIWebViewExtension.m"; path = "com.ionic.keyboard/UIWebViewExtension.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		B9A3866A821F45489355097E /* IonicKeyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "IonicKeyboard.h"; path = "com.ionic.keyboard/IonicKeyboard.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		FF8A8AE8859E4CCFAFEA29EA /* UIWebViewExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIWebViewExtension.h"; path = "com.ionic.keyboard/UIWebViewExtension.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		307A5344987546498D749220 /* CDVVibration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVVibration.m"; path = "org.apache.cordova.vibration/CDVVibration.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		BD0CAB6FC5D64EF192E01AEA /* CDVVibration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVVibration.h"; path = "org.apache.cordova.vibration/CDVVibration.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		8DAF9EE8E09840DEB8356AC6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		C05B9FAD016D4EABBCAEB8AF /* CDVLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVLocation.m"; path = "org.apache.cordova.geolocation/CDVLocation.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		A537A4AB7E1D4E3D82E5E8BA /* CDVLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLocation.h"; path = "org.apache.cordova.geolocation/CDVLocation.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		826E44D2407941ACA5737BC0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +143,8 @@
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
+				2F532159635741C6AC9D4131 /* AudioToolbox.framework in Frameworks */,
+				06895D4D53C040448C4907C8 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +217,8 @@
 				5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
+				8DAF9EE8E09840DEB8356AC6 /* AudioToolbox.framework */,
+				826E44D2407941ACA5737BC0 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -202,6 +234,21 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				3374B9897889474192B1AF15 /* Microphone.m */,
+				CBED3922A58E435CACB18CF2 /* Microphone.h */,
+				BB9B32C7CC394C88AC89BB65 /* ChromeStorage.m */,
+				08C1180447124DF79A86EDE2 /* ChromeStorage.h */,
+				5E7571E443E9414EA2D21FC8 /* ChromeAppWindow.m */,
+				DA5756CB8A0B43E6B30A14F2 /* ChromeBootstrap.m */,
+				23914EE86C70439B8FEDBFCB /* ChromeExtensionURLs.m */,
+				2507404735DC40CF9E2CF130 /* IonicKeyboard.m */,
+				E520F07F99B1406BBA883937 /* UIWebViewExtension.m */,
+				B9A3866A821F45489355097E /* IonicKeyboard.h */,
+				FF8A8AE8859E4CCFAFEA29EA /* UIWebViewExtension.h */,
+				307A5344987546498D749220 /* CDVVibration.m */,
+				BD0CAB6FC5D64EF192E01AEA /* CDVVibration.h */,
+				C05B9FAD016D4EABBCAEB8AF /* CDVLocation.m */,
+				A537A4AB7E1D4E3D82E5E8BA /* CDVLocation.h */,
 			);
 			name = Plugins;
 			path = "Hello World/Plugins";
@@ -386,6 +433,15 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
+				801FB5FB4CA142C99FC78A46 /* Microphone.m in Sources */,
+				8ADDEF52258A4D0EA9D6B663 /* ChromeStorage.m in Sources */,
+				763EF77F6B7941DFA6CC9A26 /* ChromeAppWindow.m in Sources */,
+				212FEC9F56C24217864AF800 /* ChromeBootstrap.m in Sources */,
+				929E6DE44E884EEA9A78E70C /* ChromeExtensionURLs.m in Sources */,
+				0AEB7373F978411EB1DB089A /* IonicKeyboard.m in Sources */,
+				B165AAF76C5B4ABB9349682F /* UIWebViewExtension.m in Sources */,
+				8202F1D3D8474193A002AC5E /* CDVVibration.m in Sources */,
+				735383442676452B8EB7FDB5 /* CDVLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
