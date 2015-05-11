@@ -49,6 +49,7 @@
                         {
                             "xml": "<preference name=\"DisallowOverscroll\" value=\"true\" />",
                             "count": 1
+
                         }
                     ]
                 }
@@ -78,6 +79,7 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
+
         },
         "com.voicekick.cordova.microphone": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
@@ -109,4 +111,9 @@
             "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     }
+
+        }
+    },
+    "dependent_plugins": {}
+>>>>>>> Stashed changes
 }
