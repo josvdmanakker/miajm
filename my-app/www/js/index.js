@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
- var app = {
+var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
@@ -46,7 +46,7 @@
 
         console.log('Received Event: ' + id);
     },
-
+	
 
 	
 	
@@ -63,19 +63,6 @@ var onSuccess = function(position) {
           'Heading: '           + position.coords.heading           + '\n' +
           'Speed: '             + position.coords.speed             + '\n' +
           'Timestamp: '         + position.timestamp                + '\n');
-
-    
-    function alertDismissed() {
-    // do something
-    }
-
-    navigator.notification.alert(
-        'You are the winner!',  // message
-        alertDismissed,         // callback
-        'Game Over',            // title
-        'Done'                  // buttonName
-    );
-
 };
 
 
