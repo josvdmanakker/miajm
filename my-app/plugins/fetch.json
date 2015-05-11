@@ -6,5 +6,61 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "com.voicekick.cordova.microphone": {
+        "source": {
+            "type": "registry",
+            "id": "com.voicekick.cordova.microphone"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "org.chromium.bootstrap": {
+        "source": {
+            "type": "registry",
+            "id": "org.chromium.bootstrap"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "org.chromium.common": {
+        "source": {
+            "type": "registry",
+            "id": "org.chromium.common"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "org.chromium.runtime": {
+        "source": {
+            "type": "registry",
+            "id": "org.chromium.runtime"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "org.chromium.storage": {
+        "source": {
+            "type": "registry",
+            "id": "org.chromium.storage"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "org.chromium.backgroundapp": {
+        "source": {
+            "type": "registry",
+            "id": "org.chromium.backgroundapp"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "com.ionic.keyboard": {
+        "source": {
+            "type": "registry",
+            "id": "com.ionic.keyboard"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

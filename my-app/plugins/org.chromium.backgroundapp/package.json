@@ -1,0 +1,20 @@
+{
+    "version": "1.0.0",
+    "name": "org.chromium.backgroundapp",
+    "cordova_name": "Background App",
+    "repo": "https://github.com/MobileChromeApps/mobile-chrome-apps.git",
+    "issue": "https://github.com/MobileChromeApps/mobile-chrome-apps/issues",
+    "keywords": [
+        "chrome",
+        "background"
+    ],
+    "platforms": [
+        "android"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.0.0"
+        }
+    ]
+}

@@ -5,41 +5,41 @@
     },
     "config_munge": {
         "files": {
-            "config.xml": {
+            "res/xml/config.xml": {
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"Microphone\"><param name=\"ios-package\" value=\"Microphone\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Keyboard\"><param name=\"ios-package\" onload=\"true\" value=\"IonicKeyboard\" /></feature>",
+                            "xml": "<feature name=\"Keyboard\"><param name=\"android-package\" value=\"com.ionic.keyboard.IonicKeyboard\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         }
                     ],
                     "/widget": [
                         {
-                            "xml": "<feature name=\"ChromeStorage\"><param name=\"ios-package\" value=\"ChromeStorage\" /></feature>",
+                            "xml": "<feature name=\"ChromeStorage\"><param name=\"android-package\" value=\"org.chromium.ChromeStorage\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"ChromeAppWindow\"><param name=\"ios-package\" value=\"ChromeAppWindow\" /></feature>",
+                            "xml": "<feature name=\"BackgroundPlugin\"><param name=\"android-package\" value=\"org.chromium.BackgroundPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"ChromeBootstrap\"><param name=\"ios-package\" value=\"ChromeBootstrap\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "xml": "<feature name=\"ChromeAppWindow\"><param name=\"android-package\" value=\"org.chromium.ChromeAppWindow\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"ChromeExtensionURLs\"><param name=\"ios-package\" value=\"ChromeExtensionURLs\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "xml": "<feature name=\"ChromeBootstrap\"><param name=\"android-package\" value=\"org.chromium.ChromeBootstrap\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"ChromeExtensionURLs\"><param name=\"android-package\" value=\"org.chromium.ChromeExtensionURLs\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
                         {
                             "xml": "<access origin=\"chrome-extension://*\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"KeyboardDisplayRequiresUserAction\" value=\"false\" />",
                             "count": 1
                         },
                         {
@@ -73,6 +73,9 @@
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "org.chromium.runtime": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "org.chromium.backgroundapp": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     }
