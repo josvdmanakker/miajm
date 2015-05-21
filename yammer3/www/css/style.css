@@ -1,0 +1,47 @@
+/* Empty. Add your own CSS if you like */
+body{
+	background-color: #FCFCFC;
+}
+#startTitel{
+	margin-top: 10%;
+	text-align: center;
+}
+
+.buttonMid{
+	background-color: #27D9A7;
+	border-style: none;
+	position:relative;
+	margin-top: 120px;
+	left: 17%;
+	height: 240px;
+	width: 240px;
+	border-radius: 50%;
+	font-size: 5em;
+	color: #FCFCFC;
+}
+#buttonTalk{
+	background-color: #EF295E;
+}
+
+#talkTextForm{
+	text-align: center;
+}
+
+#talkText{
+	margin:20px auto;
+	border-color: #EF295E;
+	border-style: solid;
+	border-width: 2px;
+}
+
+
+
+#buttonPicture{
+	background-color: #27D9A7;
+}
+#buttonMove{
+	background-color: #EF295E;
+}
+#buttonSend{
+	background-color: #27D9A7;
+}

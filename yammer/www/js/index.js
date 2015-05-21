@@ -77,3 +77,4 @@ navigator.geolocation.getCurrentPosition(onSuccess, onError);
 // navigator.vibrate(3000);
 
 
+

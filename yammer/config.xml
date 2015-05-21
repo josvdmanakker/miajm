@@ -45,6 +45,7 @@
     <gap:plugin name="org.apache.cordova.vibration" version="0.3.11" />
     <gap:plugin name="org.apache.cordova.geolocation" version="0.3.10" />
     
+    
     <icon src="icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />

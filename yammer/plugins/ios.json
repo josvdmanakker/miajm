@@ -10,7 +10,7 @@
                     "AudioToolbox.framework": [
                         {
                             "xml": true,
-                            "count": 1
+                            "count": 2
                         }
                     ],
                     "CoreLocation.framework": [
@@ -30,6 +30,10 @@
                         },
                         {
                             "xml": "<feature name=\"Geolocation\"><param name=\"ios-package\" value=\"CDVLocation\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -55,6 +59,9 @@
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "org.apache.cordova.geolocation": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "org.apache.cordova.dialogs": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
