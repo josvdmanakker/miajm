@@ -19,6 +19,8 @@ body{
 	font-size: 5em;
 	color: #FCFCFC;
 }
+
+/* ------------------- Talk -------------------*/
 #buttonTalk{
 	background-color: #EF295E;
 }
@@ -34,11 +36,18 @@ body{
 	border-width: 2px;
 }
 
-
+/* ------------------- picture -------------------*/
 
 #buttonPicture{
 	background-color: #27D9A7;
 }
+#thumbnail{
+	height: 20px;
+	width: 20px;
+	margin-left: 30%;
+}
+
+
 #buttonMove{
 	background-color: #EF295E;
 }
