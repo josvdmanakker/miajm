@@ -5,13 +5,14 @@ body{
 #startTitel{
 	margin-top: 10%;
 	text-align: center;
+	color: #FCFCFC;
 }
 
 .buttonMid{
-	background-color: #27D9A7;
+	background-color: #EF295E;
 	border-style: none;
 	position:relative;
-	margin-top: 120px;
+	margin-top: 100px;
 	left: 17%;
 	height: 240px;
 	width: 240px;
@@ -20,9 +21,25 @@ body{
 	color: #FCFCFC;
 }
 
+/* ------------------- Start -------------------*/
+#startBack{
+	background-image: url(../img/polygon.png);
+	background-size: cover;
+}
+
+
+
 /* ------------------- Talk -------------------*/
-#buttonTalk{
+#talkback{
 	background-color: #EF295E;
+	background-image: url(../img/polygon.png);
+	background-size: cover;
+}
+#talkTitel{
+	color: #FCFCFC;
+}
+#buttonTalk{
+	background-color: #FCFCFC;
 }
 
 #talkTextForm{
@@ -31,15 +48,24 @@ body{
 
 #talkText{
 	margin:20px auto;
-	border-color: #EF295E;
+	border-color: #FCFCFC;
+	background-color: #EF295E;
 	border-style: solid;
 	border-width: 2px;
+	color: #FCFCFC;
+	text-align: center;
 }
 
-/* ------------------- picture -------------------*/
+/* ------------------- picture ------------------- */
+#picBack{
+	background-color: #FFD044;
+	background-image: url(../img/polygon.png);
+	background-size: cover;
+}
+
 
 #buttonPicture{
-	background-color: #27D9A7;
+	background-color: #FCFCFC;
 }
 #thumbnail{
 	height: 20px;
@@ -54,3 +80,17 @@ body{
 #buttonSend{
 	background-color: #27D9A7;
 }
+
+/*------------------- Move -------------------*/
+
+#moveBack{
+	background-color: #38383A;
+	background-image: url(../img/polygon.png);
+	background-size: cover;
+}
+#buttonMove{
+	background-color: #FCFCFC;
+	color: #38383A;
+}
+
+

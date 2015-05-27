@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+var app = angular.module('starter', ['ionic', 'starter.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -19,6 +19,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   });
 })
+
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -112,8 +113,31 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 });
 
 
+app.controller('accelController', function($scope){
+  document.addEventListener("deviceready", onDeviceReady, false);
 
+// Cordova is ready
+function onDeviceReady() {
+  navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+}
 
+// onSuccess: Get a snapshot of the current acceleration
+function onSuccess(acceleration) {
+  // document.getElementById("lblX").attr('value', acceleration.x);
+  // document.getElementById("lblY").attr('value', acceleration.y);
+  // document.getElementById("lblZ").attr('value', acceleration.z);
+  $scope.lblX = acceleration.x;
+  $scope.lblY = acceleration.y;
+  $scope.lblZ = acceleration.z;
 
+  // alert('Acceleration X: ' + acceleration.x + '\n' +
+  //   'Acceleration Y: ' + acceleration.y + '\n' +
+  //   'Acceleration Z: ' + acceleration.z + '\n' +
+  //   'Timestamp: '      + acceleration.timestamp + '\n');
+}
 
-
+// onError: Failed to get the acceleration
+function onError() {
+  alert('onError!');
+}
+});
