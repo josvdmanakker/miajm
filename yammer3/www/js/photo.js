@@ -40,7 +40,6 @@ var pictureSource;   // picture source
 
       // Get image handle
       //
-      alert("HOI");
       var largeImage = document.getElementById('largeImage');
 
       // Unhide image elements
