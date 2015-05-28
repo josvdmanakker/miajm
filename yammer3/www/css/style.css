@@ -1,6 +1,7 @@
 /* Empty. Add your own CSS if you like */
 body{
 	background-color: #FCFCFC;
+	font-family: 'Ubuntu', sans-serif;
 }
 #startTitel{
 	margin-top: 10%;
@@ -19,6 +20,37 @@ body{
 	border-radius: 50%;
 	font-size: 5em;
 	color: #FCFCFC;
+}
+
+.buttonRect{
+	font-family: 'Ubuntu', sans-serif;
+	background-color: #EF295E;
+	border-style: none;
+	position:relative;
+	margin-top: 150px;
+	left: 25%;
+	height: 50px;
+	width: 175px;
+	font-size: 1.2em;
+	color: #FCFCFC;
+}
+
+h1{
+	font-family: 'Ubuntu', sans-serif;
+	color: #424242;
+	font-weight: normal;
+	font-size: 50px;
+
+
+}
+
+h2{
+	font-family: 'Ubuntu', sans-serif;
+	color: #424242;
+	font-weight: normal;
+	font-size: 30px;
+
+
 }
 
 /* ------------------- Start -------------------*/
@@ -106,5 +138,59 @@ body{
 	background-color: #FCFCFC;
 	color: #38383A;
 }
+
+
+/*------------------ Send ----------------------*/
+
+#sendBack{
+	background-image: url(../img/polygon2.png);
+	background-position: right bottom; 
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+}
+
+/*------------------ Finish ----------------------*/
+
+#finishBack{
+	background-image: url(../img/polygon2.png);
+	background-position: right bottom; 
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+}
+
+#worldGlobe{
+	position:relative;
+	margin-top: 100px;
+	left: 17%;
+	height: 240px;
+	width: 240px;
+
+
+
+}
+
+#sendtoWrapper{
+	position: absolute;
+	width: 280px;
+	left: 11%;
+	
+	height: auto;
+	text-align: center;
+
+}
+
+#countryWrapper{
+	position: absolute;
+	width: 280px;
+	left: 11%;
+	margin-top: 30px;
+	height: auto;
+	text-align: center;
+
+}
+
+
+
+
 
 

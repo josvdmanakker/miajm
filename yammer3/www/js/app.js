@@ -70,6 +70,14 @@ var app = angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
+   .state('app.finish', {
+    url: "/finish",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/finish.html"
+      }
+    }
+  })
   
 
   .state('app.search', {
