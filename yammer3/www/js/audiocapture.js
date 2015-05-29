@@ -1,8 +1,8 @@
 // Record audio
 //
-function recordAudio() {
-    var src = "myrecording.mp3";
-    var mediaRec = new Media(src,
+var src = "myrecording.amr";
+
+var mediaRec = new Media(src,
         // success callback
         function() {
             console.log("recordAudio():Audio Success");
@@ -10,9 +10,16 @@ function recordAudio() {
 
         // error callback
         function(err) {
-            console.log("recordAudio():Audio Error: "+ err.code);
+            console.log("recordAudio():Audio Error: "+ err.message);
+        },
+
+        function(status){
+            console.log('status changed: ', status);
         });
 
+function recordAudio() {
+    
+    
     // Record audio
     mediaRec.startRecord();
     // stoprecording after 10 seconds
@@ -21,9 +28,9 @@ function recordAudio() {
     }, 10000);
 }
 
-function playAudio(mediaRec) {
+function playAudio() {
     // Play the audio file at url
-    var my_media = new Media(mediaRec,
+    var my_media = new Media(src,
         // success callback
         function () {
             console.log("playAudio():Audio Success");
@@ -35,7 +42,9 @@ function playAudio(mediaRec) {
         }
     );
     // Play audio
+    console.log(my_media);
     my_media.play();
+    console.log(my_media);
 }
 
 
