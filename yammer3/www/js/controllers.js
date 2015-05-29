@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $ionicHistory) {
   // Form data for the login modal
   $scope.loginData = {};
 
@@ -31,6 +31,12 @@ angular.module('starter.controllers', [])
       $scope.closeLogin();
     }, 1000);
   };
+
+  //go back on swipe
+  $scope.goBack = function() {
+    $ionicHistory.goBack();
+  }
+
 })
 
 .controller('PlaylistsCtrl', function($scope) {
