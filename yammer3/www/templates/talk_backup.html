@@ -1,0 +1,16 @@
+
+<ion-view view-title="talk" on-swipe-right="goBack()">
+  <ion-content id="talkback" >
+    <h1 id="startTitel">Talk to us!</h1>
+    <button class="buttonMid" id="buttonTalk" class="button button-block button-positive center" ui-sref="app.picture" ><img style="margin-top:20px;margin-left:2px;height:160px;width:160px;" src="img/microfoon.svg"></button>
+
+    <button class="button button-block button-positive center" onclick="recordAudio();">Begin Talking</button>
+
+    <button class="button button-block button-positive center" onclick="playAudio();">play audio</button>
+    
+    <form id="talkTextForm">
+    	<textarea class="col-center" id="talkText" rows="4" cols="30" name="text">I want to type</textarea>
+    </form>
+    <p id="audio_position"></p>
+  </ion-content>
+</ion-view>

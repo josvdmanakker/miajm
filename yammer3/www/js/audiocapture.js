@@ -1,6 +1,25 @@
 // Record audio
 //
 var src = "myrecording.amr";
+var timeInSecs;
+var ticker;
+
+function tick() {
+    var secs = timeInSecs;
+    if (secs>0) {
+        timeInSecs--;
+    }
+    else {
+                clearInterval(ticker); // stop counting at zero
+            // startTimer(60);  // remove forward slashes in front of startTimer to repeat if required
+        }
+    document.getElementById("buttonTalk").innerHTML = secs;
+}
+
+function startTimer(secs){
+     timeInSecs = parseInt(secs)-1;
+    ticker = setInterval("tick()",1000);   // every second
+}
 
 var mediaRec = new Media(src,
         // success callback
@@ -18,14 +37,20 @@ var mediaRec = new Media(src,
         });
 
 function recordAudio() {
-    
-    
+    document.getElementById("buttonTalk").innerHTML = "10";
+    startTimer(10);
     // Record audio
+    console.log("gfjdlksag");
     mediaRec.startRecord();
+    console.log("ewrwerwe");
     // stoprecording after 10 seconds
     setTimeout(function() {
+        console.log("aaaaaaaa");
         mediaRec.stopRecord();
-    }, 10000);
+        document.getElementById("btUpload").style.display = "block";
+          // 60 seconds
+      }, 10000);
+    
 }
 
 function playAudio() {
@@ -40,7 +65,7 @@ function playAudio() {
             console.log("playAudio():Audio Error: " + err);
             console.log(err);
         }
-    );
+        );
     // Play audio
     console.log(my_media);
     my_media.play();
@@ -51,71 +76,45 @@ function playAudio() {
 
 
 
-// // Wait for device API libraries to load
-//     //
-//     document.addEventListener("deviceready", onDeviceReady, false);
 
-//     // Record audio
-//     //
-//     function recordAudio() {
-//         var src = "myrecording.amr";
-//         var mediaRec = new Media(src, onSuccess, onError);
 
-//         // Record audio
-//         mediaRec.startRecord();
 
-//         // Stop recording after 10 sec
-//         var recTime = 0;
-//         var recInterval = setInterval(function() {
-//             recTime = recTime + 1;
-//             setAudioPosition(recTime + " sec");
-//             if (recTime >= 10) {
-//                 clearInterval(recInterval);
-//                 mediaRec.stopRecord();
-//             }
-//         }, 1000);
-//     }
+    // function uploadAudio() {
+    //     var my_media = new Media(src,
+    //     // success callback
+    //     function () {
+    //         console.log("uploadAudio():Audio Success");
+    //     },
+    //     // error callback
+    //     function (err) {
+    //         console.log("uploadAudio():Audio Error: " + err);
+    //         console.log(err);
+    //     }
+    // );
+    //     var options = new FileUploadOptions();
+    //     options.fileKey="file";
+    //     options.fileName="AUDIO";
+    //     options.mimeType="audio/AMR";
 
-//     // device APIs are available
-//     //
-//     function onDeviceReady() {
-//         recordAudio();
-//     }
+    //     var params = new Object();
+    //     params.value1 = "test";
+    //     params.value2 = "param";
 
-//     // onSuccess Callback
-//     //
-//     function onSuccess() {
-//         console.log("recordAudio():Audio Success");
+    //     options.params = params;
+    //     options.chunkedMode = false;
 
-//     }
+    //     var ft = new FileTransfer();
+    //     ft.upload('AUDIO', "http://athena.fhict.nl/users/i260866/db/uploadapptest/upload.php", win, fail, options);
+    // }
 
-//     // onError Callback
-//     //
-//     function onError(error) {
-//         alert('code: '    + error.code    + '\n' +
-//           'message: ' + error.message + '\n');
-//     }
+    // function win(r) {
+    //     console.log("Code = " + r.responseCode);
+    //     console.log("Response = " + r.response);
+    //     console.log("Sent = " + r.bytesSent);
+    //     alert(r.response);
+    // }
 
-//     // Set audio position
-//     //
-//     function setAudioPosition(position) {
-//         document.getElementById('audio_position').innerHTML = position;
-//     }
-
-//     function playAudio(url) {
-//     // Play the audio file at url
-//     var my_media = new Media(url,
-//         // success callback
-//         function () {
-//             console.log("playAudio():Audio Success");
-//             my_media.play();
-//         },
-//         // error callback
-//         function (err) {
-//             console.log("playAudio():Audio Error: " + err);
-//         }
-//     );
-//     // Play audio
-//     my_media.play();
-
-// }
+    // function fail(error) {
+    //     console.log("An error has occurred: Code = " + error.code);
+    //     console.log(error);
+    // }
