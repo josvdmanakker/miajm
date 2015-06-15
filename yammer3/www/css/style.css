@@ -122,6 +122,11 @@ h2{
 #talkTitel{
 	color: #FCFCFC;
 }
+
+#buttonPlay{
+	display: none;
+}
+
 #buttonTalk{
 	padding-top:25% !important;
 }

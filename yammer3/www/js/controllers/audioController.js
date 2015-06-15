@@ -26,7 +26,7 @@ app.controller('audioController', function($scope){
         console.log("before record");
         mediaRec.startRecord();
 
-        //document.getElementById("buttonTalk").style.backgroundColor = "gray";
+        document.getElementById("buttonTalk").style.backgroundColor = "gray";
 
         // document.getElementById("buttonWhite"), ':after'.style.backgroundColor = "gray";
         console.log("started record");
@@ -40,7 +40,9 @@ app.controller('audioController', function($scope){
 $scope.stopRecord = function(){
     console.log("STOPPED")
     mediaRec.stopRecord();
-    document.getElementById("btUpload").style.display = "block"
+    document.getElementById("btUpload").style.display = "block";
+    document.getElementById("buttonPlay").style.display = "block";
+
         //document.getElementById("buttonWhite").style.backgroundColor = "#FCFCFC";
     }
 
