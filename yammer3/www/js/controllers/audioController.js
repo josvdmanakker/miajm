@@ -5,7 +5,7 @@ app.controller('audioController', function($scope){
     var ticker;
     // console.log(src);
 
-    /*var mediaRec = new Media(src,
+    var mediaRec = new Media(src,
         // success callback
         function() {
             console.log("recordAudio():Audio Success");
@@ -18,11 +18,11 @@ app.controller('audioController', function($scope){
 
         function(status){
             console.log('status changed: ', status);
-        });*/
+        });
 
     $scope.recordAudio = function(){
         console.log("RECOOOOORRD");
-        document.getElementById("buttonTalk").style.backgroundColor = "#eeeeee";
+        document.getElementById("buttonTalk").style.backgroundColor = "#D3D3D3";
         
         console.log("before record");
         mediaRec.startRecord();
