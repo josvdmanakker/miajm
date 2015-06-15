@@ -4,7 +4,17 @@
         <h1 id="startTitel">Talk to us!</h1>
         <p class="centerText" >Hold the button to talk, or switch to type if you prefer to type</p>
         
-        <div id="buttonPlay" class="button button-block button-positive center" ng-click="playAudio()">play audio</div>
+
+          <div id='buttonPlay' ng-click="playAudio()">
+
+             <div  class="buttonMid" id="btPlay" class="button button-block button-positive center" ><img style="margin-top:-100px;margin-bottom: 15%; height:30px;width:30px;" src="img/audio.svg"></div>
+
+        </div>
+
+
+        <!--<div id="buttonPlay" class="button button-block button-positive center" ng-click="playAudio()">play audio</div>-->
+
+
         <div class="centerCircle" id='buttonWhite' on-hold="recordAudio()" on-release="stopRecord()">
             
 
@@ -19,20 +29,56 @@
             Start typing your story!
             <textarea id="InputType" class="col-center" id="talkText" rows="10" cols="15" name="text"></textarea>
         </label>
-        <button id="btTalk" class="button button-block button-positive center"  ng-click="switchType();">I want to type</button>
-        <button id="btType" class="button button-block button-positive center"  ng-click="switchTypeBack();">I want to talk</button>
-        <!-- <div id="countdown">10</div> -->
+        
+
+         <!--<div class="centerCircleSmall" id='switchTypeTalk' ng-click="switchType();">
+
+             <div  class="buttonMid" id="btTalk" class="button button-block button-positive center" ><img style="margin-top:-100px;margin-bottom: 5%; height:40px;width:40px;" src="img/type.svg"></div>
+
+        </div>-->
+
+        <!--<button id="btTalk" class="button button-block button-positive center"  ng-click="switchType();">I want to type</button>-->
+        
+
+        <div id='wrapperAudio'>
+            <div class="centerCircleSmall" id='switchType' ng-click="switchTypeBack();">
+
+                 <div  class="buttonMid" id="btType" class="button button-block button-positive center" ><img style="margin-top:-100px;margin-bottom: 5%; height:40px;width:40px;" src="img/microfoon.svg"></div>
+
+            </div>
+
+            <div id='wrapper2'>
+            <button id="btUploadText" class="button button-block button-positive center"  ng-click="sendTextValue();" ui-sref="app.finish" disabled>Send text</button>
+
+            </div>
+
+        </div>
+
+
+        <div id='wrapperText'>
+            <div class="centerCircleSmall" id='switchTypeTalk' ng-click="switchType();">
+
+                 <div  class="buttonMid" id="btTalk" class="button button-block button-positive center" ><img style="margin-top:-100px;margin-bottom: 5%; height:40px;width:40px;" src="img/type.svg"></div>
+
+            </div>
+
+            <div id='wrapper2'>
+            <button id="btUpload" class="button button-block button-positive center"  ui-sref="app.finish" disabled>Send audio</button>
+
+
+            </div>
+
+        </div>
+
+
 
 
         
 
-        <button id="btUpload" class="button button-block button-positive center"  ui-sref="app.finish">Send audio</button>
-        <button id="btUploadText" class="button button-block button-positive center"  ng-click="sendTextValue();" ui-sref="app.finish">Send text</button>
+       <!-- <button id="btUpload" class="button button-block button-positive center"  ui-sref="app.finish">Send audio</button>-->
 
-
-            <!-- <form id="talkTextForm">
             	
-            </form> -->
+            </form> 
         <p id="audio_position"></p>
     </ion-content>
 </ion-view>
