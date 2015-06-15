@@ -23,9 +23,9 @@ app.controller('audioController', function($scope){
     $scope.recordAudio = function(){
         console.log("RECOOOOORRD");
 
-        var buttonTalk =  document.getElementById("buttonTalk");
-        buttonTalk.addClass("buttonTalkHold");
-        $compile(buttonTalk)(scope);
+        document.getElementById("buttonTalk").style.backgroundColor = "#D3D3D3";
+        document.getElementById("buttonTalk").style.boxShadow = "inset 0 0 10px 10px rgba(0, 0, 0, 0.2)";
+       
 
         
         console.log("before record");
@@ -44,9 +44,8 @@ app.controller('audioController', function($scope){
 $scope.stopRecord = function(){
     console.log("STOPPED")
 
-    var buttonTalk =  document.getElementById("buttonTalk");
-    buttonTalk.removeClass("buttonTalkHold");
-    $compile(buttonTalk)(scope);
+        document.getElementById("buttonTalk").style.backgroundColor = "white";
+        document.getElementById("buttonTalk").style.boxShadow = "inset 0 0 0px 0px rgba(0, 0, 0, 0.2)";
 
     mediaRec.stopRecord();
     document.getElementById("btUpload").style.display = "block";
