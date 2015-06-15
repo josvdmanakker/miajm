@@ -5,30 +5,31 @@ app.controller('audioController', function($scope){
     var ticker;
     // console.log(src);
 
-    /*var mediaRec = new Media(src,
-        // success callback
-        function() {
-            console.log("recordAudio():Audio Success");
-        },
+    // var mediaRec = new Media(src,
+    //     // success callback
+    //     function() {
+    //         console.log("recordAudio():Audio Success");
+    //     },
 
-        // error callback
-        function(err) {
-            console.log("recordAudio():Audio Error: "+ err.message);
-        },
+    //     // error callback
+    //     function(err) {
+    //         console.log("recordAudio():Audio Error: "+ err.message);
+    //     },
 
-        function(status){
-            console.log('status changed: ', status);
-        });*/
+    //     function(status){
+    //         console.log('status changed: ', status);
+    //     });
 
     $scope.recordAudio = function(){
         console.log("RECOOOOORRD");
+
         var buttonTalk =  document.getElementById("buttonTalk");
         angular.buttonTalk.addClass("buttonTalkHold");
+
         
         console.log("before record");
         mediaRec.startRecord();
 
-       
 
         // document.getElementById("buttonWhite"), ':after'.style.backgroundColor = "gray";
         console.log("started record");
@@ -41,8 +42,10 @@ app.controller('audioController', function($scope){
 
 $scope.stopRecord = function(){
     console.log("STOPPED")
+
     var buttonTalk =  document.getElementById("buttonTalk");
     angular.buttonTalk.removeClass("buttonTalkHold");
+
     mediaRec.stopRecord();
     document.getElementById("btUpload").style.display = "block";
     document.getElementById("buttonPlay").style.display = "block";
