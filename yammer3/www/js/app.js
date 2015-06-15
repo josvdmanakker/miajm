@@ -125,3 +125,6 @@ app.controller('accelController', function($scope){
 function onDeviceReady() {
   
 }
+
+
+});
