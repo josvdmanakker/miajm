@@ -26,45 +26,34 @@ app.controller('audioController', function($scope){
         document.getElementById("buttonTalk").style.backgroundColor = "#D3D3D3";
         document.getElementById("buttonTalk").style.boxShadow = "inset 0 0 10px 10px rgba(0, 0, 0, 0.2)";
 
-
-
         console.log("before record");
         mediaRec.startRecord();
 
-
-        // document.getElementById("buttonWhite"), ':after'.style.backgroundColor = "gray";
         console.log("started record");
-    // setTimeout(function(){
-    //     console.log("waiting");
-    //     mediaRec.stopRecord();
-    //     console.log("stopped record");
-    // }, 3000);
+
     }
 
-    $scope.stopRecord = function(){
-        console.log("STOPPED")
 
-        document.getElementById("buttonTalk").style.backgroundColor = "white";
-        document.getElementById("buttonTalk").style.boxShadow = "inset 0 0 0px 0px rgba(0, 0, 0, 0.2)";
+$scope.stopRecord = function(){
+    console.log("STOPPED")
 
+    document.getElementById("buttonTalk").style.backgroundColor = "white";
+    document.getElementById("buttonTalk").style.boxShadow = "0 9px 2px -2px rgba(0, 0, 0, 0.5)";
     mediaRec.stopRecord();
     document.getElementById("btUpload").style.opacity= "1";
     document.getElementById("btUpload").disabled = false;
     document.getElementById("buttonPlay").style.display = "block";
+}
+$scope.sendTextServer = function(){
+    var myDataRef = new Firebase('https://yammer3.firebaseio.com/');
+    var name = "Henk";
+    var text = "testing 1";
+    console.log($scope.talkText);
+    myDataRef.push($scope.talkText);
+}
 
 
-            //document.getElementById("buttonWhite").style.backgroundColor = "#FCFCFC";
-    }
-    $scope.sendTextServer = function(){
-        var myDataRef = new Firebase('https://yammer3.firebaseio.com/');
-        var name = "Henk";
-        var text = "testing 1";
-        console.log($scope.talkText);
-        myDataRef.push($scope.talkText);
-    }
-
-
-    $scope.playAudio = function() {
+$scope.playAudio = function() {
         // Play the audio file at url
         var my_media = new Media(src,
             // success callback
@@ -92,11 +81,7 @@ app.controller('audioController', function($scope){
         document.getElementById("wrapperText").style.display = "none";
         document.getElementById("wrapperAudio").style.display = "block";
 
-        /*document.getElementById("btType").style.display = "block";
         document.getElementById("btPlay").style.display = "none";
-
-        document.getElementById("btUpload").style.display = "none";
-        document.getElementById("btUploadText").style.display = "block";*/
 
 
 
@@ -115,11 +100,7 @@ app.controller('audioController', function($scope){
         document.getElementById("wrapperText").style.display = "block";
         document.getElementById("wrapperAudio").style.display = "none";
 
-       /* document.getElementById("btType").style.display = "none";
         document.getElementById("btPlay").style.display = "block";
-
-        document.getElementById("btUpload").style.display = "block";
-        document.getElementById("btUploadText").style.display = "none";*/
     }
 
 

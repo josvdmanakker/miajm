@@ -4,47 +4,11 @@ body{
 	font-family: 'Ubuntu', sans-serif;
 }
 
-
-
 #startTitel{
 	margin-top: 10%;
 	text-align: center;
 	color: #FCFCFC;
 }
-/*
-.centerCircle{
-	width: 70%;
-		margin-left: 15%;
-	margin-right: 15%;	
-	cursor: pointer;
-}
-.centerCircle:after {
-    content: "";
-    display: block;
-    width: 100%;
-    height:0;
-    padding-bottom: 100%;
-    background-color: #EF295E;
-    border-style: none;
-    -moz-border-radius: 50%; 
-    -webkit-border-radius: 50%; 
-    border-radius: 50%;
-	box-shadow: 0 9px 2px -2px rgba(0, 0, 0, 0.5);
-	margin-top: 100px;
-	cursor: pointer;
-}
-.centerCircle div{
-    float:left;
-    width:100%;
-    padding-top:50%;
-    line-height:1em;
-    margin-top:-0.5em;
-    text-align:center;
-    color: #FCFCFC;
-    font-size: 5em;
-    background-color: none;
-    cursor: pointer;
-}*/
 
 .centerCircle{
 
@@ -56,25 +20,25 @@ body{
 }
 
 #wrapperAudio {
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    text-align: center;
-    display:none;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: center;
+	display:none;
 }
 
 #wrapperText {
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    text-align: center;
-    display:block;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: center;
+	display:block;
 }
 
 .centerCircleSmall{
 
 	width: 25%;
-		
+
 	cursor: pointer;
 	float:left;
 	display: inline-block;
@@ -84,40 +48,26 @@ body{
 .buttonMid{
 
 	position: relative;
-  display: inline-block;
-  width: 100%;
-  height: 0;
-  padding: 50% 0;
-  border-radius: 50%;
-  
-  /* Just making it pretty */
-     background-color: #EF295E;
-    border-style: none;
-    -moz-border-radius: 50%; 
-    -webkit-border-radius: 50%; 
-    border-radius: 50%;
+	display: inline-block;
+	width: 100%;
+	height: 0;
+	padding: 50% 0;
+	border-radius: 50%;
+
+	/* Just making it pretty */
+	background-color: #EF295E;
+	border-style: none;
+	-moz-border-radius: 50%; 
+	-webkit-border-radius: 50%; 
+	border-radius: 50%;
 	box-shadow: 0 9px 2px -2px rgba(0, 0, 0, 0.5);
 	margin-top: 100px;
 	cursor: pointer;
 	color: #FCFCFC;
-    font-size: 5em;
-    line-height: 0px;
-    text-align: center;
-}
-/*
-.buttonMid{
-	background-color: #EF295E;
-	border-style: none;
-	position:relative;
-	margin-top: 100px;
-	left: 17%;
-	height: 240px;
-	width: 240px;
-	border-radius: 50%;
 	font-size: 5em;
-	color: #FCFCFC;
-	box-shadow: 0 9px 2px -2px rgba(0, 0, 0, 0.5);
-}*/
+	line-height: 0px;
+	text-align: center;
+}
 
 .buttonRect{
 	font-family: 'Ubuntu', sans-serif;
@@ -146,8 +96,6 @@ h2{
 	color: #424242;
 	font-weight: normal;
 	font-size: 30px;
-
-
 }
 
 .centerText{
@@ -168,11 +116,6 @@ h2{
 	background-size: 100% auto;
 	
 }
-
-
-
-
-
 
 /* ------------------- Talk -------------------*/
 #talkback{
@@ -215,8 +158,6 @@ h2{
 
 
 }
-
-
 
 #talkTextForm{
 	text-align: center;
@@ -270,9 +211,9 @@ h2{
 
 #wrapper2{
 
-		display: inline-block;
-		
-		width: 50%;
+	display: inline-block;
+
+	width: 50%;
 
 }
 
@@ -284,6 +225,7 @@ h2{
 #btPlay{
 	background-color: #38383A;
 	margin-top: 30px !important;
+	box-shadow: 0 9px 2px -2px rgba(0, 0, 0, 0.3) !important;
 
 }
 
@@ -351,74 +293,74 @@ h2{
 }
 #buttonWhite:after.activated{
 	background-color: gray !important; 
-}*/
+	}*/
 
-/*------------------- Move -------------------*/
+	/*------------------- Move -------------------*/
 
-#moveBack{
-	background-color: #38383A;
-	background-image: url(../img/polygon2.png);
-	background-position: right bottom; 
-	background-repeat: no-repeat;
-	background-size: 100% auto;
-}
-#buttonMove{
-	background-color: #FCFCFC;
-	color: #38383A;
-}
-
-
-/*------------------ Send ----------------------*/
-
-#sendBack{
-	background-image: url(../img/polygon2.png);
-	background-position: right bottom; 
-	background-repeat: no-repeat;
-	background-size: 100% auto;
-}
-
-/*------------------ Finish ----------------------*/
-
-#finishBack{
-	background-image: url(../img/polygon2.png);
-	background-position: right bottom; 
-	background-repeat: no-repeat;
-	background-size: 100% auto;
-}
-
-#worldGlobe{
-	position:relative;
-	margin-top: 100px;
-	left: 17%;
-	height: 240px;
-	width: 240px;
-}
+	#moveBack{
+		background-color: #38383A;
+		background-image: url(../img/polygon2.png);
+		background-position: right bottom; 
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+	}
+	#buttonMove{
+		background-color: #FCFCFC;
+		color: #38383A;
+	}
 
 
+	/*------------------ Send ----------------------*/
 
-#sendtoWrapper{
-	position: absolute;
-	width: 280px;
-	left: 11%;
-	
-	height: auto;
-	text-align: center;
+	#sendBack{
+		background-image: url(../img/polygon2.png);
+		background-position: right bottom; 
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+	}
 
-}
+	/*------------------ Finish ----------------------*/
 
-#countryWrapper{
-	position: absolute;
-	width: 280px;
-	left: 11%;
-	margin-top: 10px;
-	height: auto;
-	text-align: center;
+	#finishBack{
+		background-image: url(../img/polygon2.png);
+		background-position: right bottom; 
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+	}
 
-}
+	#worldGlobe{
+		position:relative;
+		margin-top: 100px;
+		left: 17%;
+		height: 240px;
+		width: 240px;
+	}
 
-#buttonSendAnother{
-	margin-top: 80px;
-}
+
+
+	#sendtoWrapper{
+		position: absolute;
+		width: 280px;
+		left: 11%;
+
+		height: auto;
+		text-align: center;
+
+	}
+
+	#countryWrapper{
+		position: absolute;
+		width: 280px;
+		left: 11%;
+		margin-top: 10px;
+		height: auto;
+		text-align: center;
+
+	}
+
+	#buttonSendAnother{
+		margin-top: 80px;
+	}
 
 
 

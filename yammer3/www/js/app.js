@@ -123,26 +123,5 @@ app.controller('accelController', function($scope){
 
 // Cordova is ready
 function onDeviceReady() {
-  navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+  
 }
-
-// onSuccess: Get a snapshot of the current acceleration
-function onSuccess(acceleration) {
-  // document.getElementById("lblX").attr('value', acceleration.x);
-  // document.getElementById("lblY").attr('value', acceleration.y);
-  // document.getElementById("lblZ").attr('value', acceleration.z);
-  $scope.lblX = acceleration.x;
-  $scope.lblY = acceleration.y;
-  $scope.lblZ = acceleration.z;
-
-  // alert('Acceleration X: ' + acceleration.x + '\n' +
-  //   'Acceleration Y: ' + acceleration.y + '\n' +
-  //   'Acceleration Z: ' + acceleration.z + '\n' +
-  //   'Timestamp: '      + acceleration.timestamp + '\n');
-}
-
-// onError: Failed to get the acceleration
-function onError() {
-  alert('onError!');
-}
-});
