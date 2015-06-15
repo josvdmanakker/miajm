@@ -5,7 +5,7 @@ app.controller('audioController', function($scope){
     var ticker;
     // console.log(src);
 
-    var mediaRec = new Media(src,
+    /*var mediaRec = new Media(src,
         // success callback
         function() {
             console.log("recordAudio():Audio Success");
@@ -18,10 +18,11 @@ app.controller('audioController', function($scope){
 
         function(status){
             console.log('status changed: ', status);
-        });
+        });*/
 
     $scope.recordAudio = function(){
         console.log("RECOOOOORRD");
+        document.getElementById("buttonTalk").style.backgroundColor = "#eeeeee";
         
         console.log("before record");
         mediaRec.startRecord();
@@ -39,6 +40,7 @@ app.controller('audioController', function($scope){
 
 $scope.stopRecord = function(){
     console.log("STOPPED")
+    document.getElementById("buttonTalk").style.backgroundColor = "#FCFCFC";
     mediaRec.stopRecord();
     document.getElementById("btUpload").style.display = "block"
         //document.getElementById("buttonWhite").style.backgroundColor = "#FCFCFC";

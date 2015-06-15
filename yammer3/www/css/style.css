@@ -8,7 +8,7 @@ body{
 	text-align: center;
 	color: #FCFCFC;
 }
-
+/*
 .centerCircle{
 	width: 70%;
 		margin-left: 15%;
@@ -41,8 +41,39 @@ body{
     font-size: 5em;
     background-color: none;
     cursor: pointer;
-}
+}*/
 
+.centerCircle{
+
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;	
+	cursor: pointer;
+
+}
+.buttonMid{
+
+	position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  padding: 50% 0;
+  border-radius: 50%;
+  
+  /* Just making it pretty */
+     background-color: #EF295E;
+    border-style: none;
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+	box-shadow: 0 9px 2px -2px rgba(0, 0, 0, 0.5);
+	margin-top: 100px;
+	cursor: pointer;
+	color: #FCFCFC;
+    font-size: 5em;
+    line-height: 0px;
+    text-align: center;
+}
 /*
 .buttonMid{
 	background-color: #EF295E;
@@ -75,7 +106,7 @@ h1{
 	font-family: 'Ubuntu', sans-serif;
 	color: #424242;
 	font-weight: normal;
-	font-size: 50px;
+	font-size: 40px;
 
 
 }
@@ -122,8 +153,11 @@ h2{
 #talkTitel{
 	color: #FCFCFC;
 }
+
 #buttonTalk{
-	padding-top:25% !important;
+	background-color: white;
+	margin-top: 20px !important;
+
 }
 
 #buttonTalk.activated{
@@ -235,13 +269,13 @@ h2{
 #buttonGreen:after{
 	background-color: #27D9A7 !important; 
 }
-#buttonWhite:after{
+/*#buttonWhite:after{
 	background-color: #FCFCFC !important; 
-	margin-top: 50px !important;
+	margin-top: 30px !important;
 }
 #buttonWhite:after.activated{
 	background-color: gray !important; 
-}
+}*/
 
 /*------------------- Move -------------------*/
 
