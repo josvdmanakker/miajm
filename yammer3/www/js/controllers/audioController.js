@@ -24,7 +24,8 @@ app.controller('audioController', function($scope){
         console.log("RECOOOOORRD");
 
         var buttonTalk =  document.getElementById("buttonTalk");
-        angular.buttonTalk.addClass("buttonTalkHold");
+        buttonTalk.addClass("buttonTalkHold");
+        $compile(buttonTalk)(scope);
 
         
         console.log("before record");
@@ -44,7 +45,8 @@ $scope.stopRecord = function(){
     console.log("STOPPED")
 
     var buttonTalk =  document.getElementById("buttonTalk");
-    angular.buttonTalk.removeClass("buttonTalkHold");
+    buttonTalk.removeClass("buttonTalkHold");
+    $compile(buttonTalk)(scope);
 
     mediaRec.stopRecord();
     document.getElementById("btUpload").style.display = "block";
