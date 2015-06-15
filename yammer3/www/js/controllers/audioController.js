@@ -21,28 +21,32 @@ app.controller('audioController', function($scope){
         });
 
     $scope.recordAudio = function(){
-        mediaRec.stopRecord();
         console.log("RECOOOOORRD");
         
         console.log("before record");
         mediaRec.startRecord();
+
+        //document.getElementById("buttonTalk").style.backgroundColor = "gray";
+
+        // document.getElementById("buttonWhite"), ':after'.style.backgroundColor = "gray";
         console.log("started record");
     // setTimeout(function(){
     //     console.log("waiting");
     //     mediaRec.stopRecord();
     //     console.log("stopped record");
     // }, 3000);
+}
+
+$scope.stopRecord = function(){
+    console.log("STOPPED")
+    mediaRec.stopRecord();
+        //document.getElementById("buttonWhite").style.backgroundColor = "#FCFCFC";
     }
 
-    $scope.stopRecord = function(){
-        console.log("STOPPED")
-        mediaRec.stopRecord();
-    }
 
 
 
-
-$scope.playAudio = function() {
+    $scope.playAudio = function() {
         // Play the audio file at url
         var my_media = new Media(src,
             // success callback
@@ -62,7 +66,7 @@ $scope.playAudio = function() {
     }
 
     $scope.switchType = function(){
-        document.getElementById("buttonTalk").style.display = "none";
+        document.getElementById("buttonWhite").style.display = "none";
         document.getElementById("InputText").style.display = "block";
         document.getElementById("btTalk").style.display = "none";
         document.getElementById("btType").style.display = "block";
@@ -74,7 +78,7 @@ $scope.playAudio = function() {
     }
 
     $scope.switchTypeBack = function(){
-        document.getElementById("buttonTalk").style.display = "block";
+        document.getElementById("buttonWhite").style.display = "block";
         document.getElementById("InputText").style.display = "none";
         document.getElementById("btTalk").style.display = "block";
         document.getElementById("btType").style.display = "none";

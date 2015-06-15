@@ -42,7 +42,9 @@ var app = angular.module('starter', ['ionic','ngCordova','starter.controllers'])
     url: "/talk",
     views: {
       'menuContent': {
-        templateUrl: "templates/talk.html"
+        templateUrl: "templates/talk.html",
+        controller: 'audioController'
+
       }
     }
   })
@@ -70,7 +72,7 @@ var app = angular.module('starter', ['ionic','ngCordova','starter.controllers'])
       }
     }
   })
-   .state('app.finish', {
+  .state('app.finish', {
     url: "/finish",
     views: {
       'menuContent': {

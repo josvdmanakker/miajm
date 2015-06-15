@@ -1,19 +1,38 @@
 
 <ion-view view-title="talk" on-swipe-right="goBack()">
-  <ion-content id="talkback" >
-    <h1 id="startTitel">Talk to us!</h1>
-    <p class="centerText" >Hit the button to start your 10 seconds talk</p>
-    <button  class="buttonMid" id="buttonTalk" class="button button-block button-positive center" onclick="recordAudio();"><img style="margin-top:20px;margin-left:2px;height:160px;width:160px;" src="img/microfoon.svg"></button>
-    <!-- <div id="countdown">10</div> -->
+    <ion-content id="talkback" >
+        <h1 id="startTitel">Talk to us!</h1>
+        <p class="centerText" >Hit the button to start your 10 seconds talk</p>
+        
+
+        <div class="centerCircle" id='buttonWhite' on-hold="recordAudio()" on-release="stopRecord()">
+            
+
+             <div  class="buttonMid" id="buttonTalk" class="button button-block button-positive center" ><img style="margin-top:20px;margin-left:2px;height:160px;width:160px;" src="img/microfoon.svg"></div>
+
+        </div>
 
 
-<!--     <button class="button button-block button-positive center" onclick="playAudio();">play audio</button> -->
+        
 
-    <button id="btUpload" class="button button-block button-positive center"  ui-sref="app.finish">Send audio</button>
-    
-    <!-- <form id="talkTextForm">
-    	<textarea class="col-center" id="talkText" rows="4" cols="30" name="text">I want to type</textarea>
-    </form> -->
-    <p id="audio_position"></p>
-  </ion-content>
+        <label class="item item-input" id="InputText">
+            Start typing your story!
+            <textarea id="InputType" class="col-center" id="talkText" rows="10" cols="15" name="text"></textarea>
+        </label>
+        <button id="btTalk" class="button button-block button-positive center"  ng-click="switchType();">I want to type</button>
+        <button id="btType" class="button button-block button-positive center"  ng-click="switchTypeBack();">I want to talk</button>
+        <!-- <div id="countdown">10</div> -->
+
+
+        <button class="button button-block button-positive center" ng-click="playAudio()">play audio</button>
+
+        <button id="btUpload" class="button button-block button-positive center"  ui-sref="app.finish">Send audio</button>
+        <button id="btUploadText" class="button button-block button-positive center"  ng-click="sendTextValue();" ui-sref="app.finish">Send text</button>
+
+
+            <!-- <form id="talkTextForm">
+            	
+            </form> -->
+        <p id="audio_position"></p>
+    </ion-content>
 </ion-view>
