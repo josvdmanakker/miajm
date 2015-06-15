@@ -25,9 +25,9 @@ app.controller('audioController', function($scope){
 
         document.getElementById("buttonTalk").style.backgroundColor = "#D3D3D3";
         document.getElementById("buttonTalk").style.boxShadow = "inset 0 0 10px 10px rgba(0, 0, 0, 0.2)";
-       
 
-        
+
+
         console.log("before record");
         mediaRec.startRecord();
 
@@ -39,10 +39,10 @@ app.controller('audioController', function($scope){
     //     mediaRec.stopRecord();
     //     console.log("stopped record");
     // }, 3000);
-}
+    }
 
-$scope.stopRecord = function(){
-    console.log("STOPPED")
+    $scope.stopRecord = function(){
+        console.log("STOPPED")
 
         document.getElementById("buttonTalk").style.backgroundColor = "white";
         document.getElementById("buttonTalk").style.boxShadow = "inset 0 0 0px 0px rgba(0, 0, 0, 0.2)";
@@ -52,10 +52,16 @@ $scope.stopRecord = function(){
     document.getElementById("btUpload").disabled = false;
     document.getElementById("buttonPlay").style.display = "block";
 
-        //document.getElementById("buttonWhite").style.backgroundColor = "#FCFCFC";
+
+            //document.getElementById("buttonWhite").style.backgroundColor = "#FCFCFC";
     }
-
-
+    $scope.sendTextServer = function(){
+        var myDataRef = new Firebase('https://yammer3.firebaseio.com/');
+        var name = "Henk";
+        var text = "testing 1";
+        console.log($scope.talkText);
+        myDataRef.push($scope.talkText);
+    }
 
 
     $scope.playAudio = function() {
@@ -122,6 +128,9 @@ $scope.stopRecord = function(){
 
         localStorage.setItem("textSave", document.getElementById('InputType').value);
         console.log(localStorage.textSave);
+
+
+
     }
 });
 
