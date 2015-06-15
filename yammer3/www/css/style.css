@@ -154,6 +154,12 @@ h2{
 	color: #FCFCFC;
 }
 
+
+#buttonPlay{
+	display: none;
+}
+
+
 #buttonTalk{
 	background-color: white;
 	margin-top: 20px !important;
