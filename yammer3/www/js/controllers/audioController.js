@@ -20,16 +20,16 @@ app.controller('audioController', function($scope){
     //         console.log('status changed: ', status);
     //     });
 
-    $scope.recordAudio = function(){
-        console.log("RECOOOOORRD");
+$scope.recordAudio = function(){
+    console.log("RECOOOOORRD");
 
-        document.getElementById("buttonTalk").style.backgroundColor = "#D3D3D3";
-        document.getElementById("buttonTalk").style.boxShadow = "inset 0 0 10px 10px rgba(0, 0, 0, 0.2)";
-       
+    document.getElementById("buttonTalk").style.backgroundColor = "#D3D3D3";
+    document.getElementById("buttonTalk").style.boxShadow = "inset 0 0 10px 10px rgba(0, 0, 0, 0.2)";
 
-        
-        console.log("before record");
-        mediaRec.startRecord();
+
+
+    console.log("before record");
+    mediaRec.startRecord();
 
 
         // document.getElementById("buttonWhite"), ':after'.style.backgroundColor = "gray";
@@ -41,11 +41,11 @@ app.controller('audioController', function($scope){
     // }, 3000);
 }
 
-$scope.stopRecord = function(){
+    $scope.stopRecord = function(){
     console.log("STOPPED")
 
-        document.getElementById("buttonTalk").style.backgroundColor = "white";
-        document.getElementById("buttonTalk").style.boxShadow = "inset 0 0 0px 0px rgba(0, 0, 0, 0.2)";
+    document.getElementById("buttonTalk").style.backgroundColor = "white";
+    document.getElementById("buttonTalk").style.boxShadow = "inset 0 0 0px 0px rgba(0, 0, 0, 0.2)";
 
     mediaRec.stopRecord();
     document.getElementById("btUpload").style.display = "block";
@@ -54,6 +54,10 @@ $scope.stopRecord = function(){
         //document.getElementById("buttonWhite").style.backgroundColor = "#FCFCFC";
     }
 
+    var myDataRef = new Firebase('https://yammer3.firebaseio.com/');
+    var name = "Henk";
+    var text = "testing 1";
+    myDataRef.push('HJFDJuiuiuiuiuJKDF');
 
 
 

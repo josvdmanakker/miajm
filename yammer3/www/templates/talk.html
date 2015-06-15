@@ -17,7 +17,7 @@
 
         <label class="item item-input" id="InputText">
             Start typing your story!
-            <textarea id="InputType" class="col-center" id="talkText" rows="10" cols="15" name="text"></textarea>
+            <textarea id="InputType" class="col-center" id="talkText" rows="10" cols="15" name="text" ng-model="talkText.text"></textarea>
         </label>
         <button id="btTalk" class="button button-block button-positive center"  ng-click="switchType();">I want to type</button>
         <button id="btType" class="button button-block button-positive center"  ng-click="switchTypeBack();">I want to talk</button>
