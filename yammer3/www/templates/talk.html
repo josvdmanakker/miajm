@@ -17,7 +17,8 @@
 
         <label class="item item-input" id="InputText">
             Start typing your story!
-            <textarea id="InputType" class="col-center" id="talkText" rows="10" cols="15" name="text" ng-model="talkText.text"></textarea>
+            <textarea id="InputType" class="col-center" id="talkText" rows="10" cols="15" name="text" ng-model="$parent.talkText" ></textarea>
+            {{talkText}}
         </label>
         <button id="btTalk" class="button button-block button-positive center"  ng-click="switchType();">I want to type</button>
         <button id="btType" class="button button-block button-positive center"  ng-click="switchTypeBack();">I want to talk</button>
@@ -27,7 +28,7 @@
         
 
         <button id="btUpload" class="button button-block button-positive center"  ui-sref="app.finish">Send audio</button>
-        <button id="btUploadText" class="button button-block button-positive center"  ng-click="sendTextValue();" ui-sref="app.finish">Send text</button>
+        <button id="btUploadText" class="button button-block button-positive center"  ng-click="sendTextServer();" ui-sref="app.finish">Send text</button>
 
 
             <!-- <form id="talkTextForm">
