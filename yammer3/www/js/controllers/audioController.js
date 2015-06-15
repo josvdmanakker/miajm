@@ -3,7 +3,7 @@ app.controller('audioController', function($scope){
     var src = "myrecording.amr";
     var timeInSecs;
     var ticker;
-    console.log(src);
+    // console.log(src);
 
     var mediaRec = new Media(src,
         // success callback
@@ -40,6 +40,7 @@ app.controller('audioController', function($scope){
 $scope.stopRecord = function(){
     console.log("STOPPED")
     mediaRec.stopRecord();
+    document.getElementById("btUpload").style.display = "block"
         //document.getElementById("buttonWhite").style.backgroundColor = "#FCFCFC";
     }
 
