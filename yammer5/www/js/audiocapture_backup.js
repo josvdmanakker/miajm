@@ -3,8 +3,6 @@ app.controller('audioController', function($scope){
     var src = "myrecording.amr";
     var timeInSecs;
     var ticker;
-    var audioObject;
-    var textReceived;
     // console.log(src);
 
     var mediaRec = new Media(src,
@@ -36,31 +34,24 @@ app.controller('audioController', function($scope){
     }
 
 
-    $scope.stopRecord = function(){
-        console.log("STOPPED")
+$scope.stopRecord = function(){
+    console.log("STOPPED")
 
-        document.getElementById("buttonTalk").style.backgroundColor = "white";
-        document.getElementById("buttonTalk").style.boxShadow = "0 9px 2px -2px rgba(0, 0, 0, 0.5)";
-        mediaRec.stopRecord();
-        audioObject = mediaRec;
-        document.getElementById("btUpload").style.opacity= "1";
-        document.getElementById("btUpload").disabled = false;
-        document.getElementById("buttonPlay").style.display = "block";
-    }
-    $scope.sendTextServer = function(){
-        var myDataRef = new Firebase('https://yammer3.firebaseio.com/');
-        //console.log($scope.talkText);
-        myDataRef.push({Mieke2: $scope.talkText});
-        
-    }
-
-    $scope.sendAudio = function(){
-        var myDataRef = new Firebase('https://yammer3.firebaseio.com/');
-    // var name = "Henk";
-    // var text = "testing 1";
-    console.log(src);
-    myDataRef.push(src);
+    document.getElementById("buttonTalk").style.backgroundColor = "white";
+    document.getElementById("buttonTalk").style.boxShadow = "0 9px 2px -2px rgba(0, 0, 0, 0.5)";
+    mediaRec.stopRecord();
+    document.getElementById("btUpload").style.opacity= "1";
+    document.getElementById("btUpload").disabled = false;
+    document.getElementById("buttonPlay").style.display = "block";
 }
+$scope.sendTextServer = function(){
+    var myDataRef = new Firebase('https://yammer3.firebaseio.com/');
+    var name = "Henk";
+    var text = "testing 1";
+    console.log($scope.talkText);
+    myDataRef.push($scope.talkText);
+}
+
 
 $scope.playAudio = function() {
         // Play the audio file at url
@@ -118,23 +109,9 @@ $scope.playAudio = function() {
 
         localStorage.setItem("textSave", document.getElementById('InputType').value);
         console.log(localStorage.textSave);
-    }
 
-    $scope.receiveYam = function(){
-        var myDataRef = new Firebase('https://yammer3.firebaseio.com/');
-        //console.log($scope.talkText);
 
-        myDataRef.once('value', function(dataSnapshot){
-            dataSnapshot.forEach(function(childSnapshot){
-                // var key = childSnapshot.key();
-                // console.log(key);
-                var childData = childSnapshot.val();
-                console.log(childData);
-                var stringObject =  JSON.stringify(childData);
-                alert(stringObject);
-            });
-            myDataRef.remove()
-        });
+
     }
 });
 

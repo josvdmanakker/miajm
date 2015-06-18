@@ -1,10 +1,18 @@
 <ion-view view-title="talk" on-swipe-right="goBack()">
 <ion-content id="talkback" scroll="false" >
+
+
 <h1 id="startTitel">Talk to us!</h1>
 <p class="centerText" >Hold the button to talk, or switch to type if you prefer to type</p>
+
+<div id="buttonReceive" ng-click="receiveYam();">
+  <div id="btReceive" class="buttonMid" class="button button-block button-positive center"></div>
+</div>
+
 <div id='buttonPlay' ng-click="playAudio()">
  <div  class="buttonMid" id="btPlay" class="button button-block button-positive center" ><img style="margin-top:-100px;margin-bottom: 15%; height:30px;width:30px;" src="img/audio.svg"></div>
 </div>
+
 <!-- <div id="spin"></div>
 <h1>Firepano</h1>
 <input class="hidden" type="file" accept="image/*" capture="camera" id="file-upload">

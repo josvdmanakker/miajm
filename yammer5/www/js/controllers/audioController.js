@@ -5,7 +5,28 @@ app.controller('audioController', function($scope){
     var ticker;
     var audioObject;
     var textReceived;
+    var stringObject;
     // console.log(src);
+
+    var myDataRef = new Firebase('https://yammer3.firebaseio.com/');
+    myDataRef.once('value', function(dataSnapshot){
+        dataSnapshot.forEach(function(childSnapshot){
+                // var key = childSnapshot.key();
+                // console.log(key);
+               
+                var childData = childSnapshot.val();
+                console.log(childData);
+                stringObject =  JSON.stringify(childData);
+                console.log(stringObject);
+
+                if (stringObject) {
+                    document.getElementById("buttonReceive").style.display = "block";
+                    document.getElementById("btReceive").innerHTML = "!";
+                    document.getElementById("btReceive").style.color = "#26D9A6";
+                }
+
+            });
+    });
 
     var mediaRec = new Media(src,
         // success callback
@@ -32,10 +53,7 @@ app.controller('audioController', function($scope){
         mediaRec.startRecord();
 
         console.log("started record");
-
     }
-
-
     $scope.stopRecord = function(){
         console.log("STOPPED")
 
@@ -50,19 +68,14 @@ app.controller('audioController', function($scope){
     $scope.sendTextServer = function(){
         var myDataRef = new Firebase('https://yammer3.firebaseio.com/');
         //console.log($scope.talkText);
-        myDataRef.push({Mieke2: $scope.talkText});
-        
+        myDataRef.push($scope.talkText);
     }
-
     $scope.sendAudio = function(){
         var myDataRef = new Firebase('https://yammer3.firebaseio.com/');
-    // var name = "Henk";
-    // var text = "testing 1";
-    console.log(src);
-    myDataRef.push(src);
-}
-
-$scope.playAudio = function() {
+        console.log(src);
+        myDataRef.push(src);
+    }
+    $scope.playAudio = function() {
         // Play the audio file at url
         var my_media = new Media(src,
             // success callback
@@ -87,8 +100,8 @@ $scope.playAudio = function() {
         //document.getElementById("switchTypeTalk").style.display = "none";
 
 
-        document.getElementById("wrapperText").style.display = "none";
-        document.getElementById("wrapperAudio").style.display = "block";
+        
+        document.getElementById("wrapText").style.display = "block";
 
         document.getElementById("btPlay").style.display = "none";
 
@@ -106,8 +119,8 @@ $scope.playAudio = function() {
         document.getElementById("InputText").style.display = "none";
         //document.getElementById("switchTypeTalk").style.display = "block";
 
-        document.getElementById("wrapperText").style.display = "block";
-        document.getElementById("wrapperAudio").style.display = "none";
+        
+        document.getElementById("wrapText").style.display = "none";
 
         document.getElementById("btPlay").style.display = "block";
     }
@@ -120,21 +133,53 @@ $scope.playAudio = function() {
         console.log(localStorage.textSave);
     }
 
-    $scope.receiveYam = function(){
-        var myDataRef = new Firebase('https://yammer3.firebaseio.com/');
-        //console.log($scope.talkText);
+    $scope.showYam = function(){
+        var str = stringObject;
+        var res = str.replace(/["']/g, '');
+        var res2 = res.replace('{','');
+        var res3 = res2.replace('}','');
 
-        myDataRef.once('value', function(dataSnapshot){
-            dataSnapshot.forEach(function(childSnapshot){
-                // var key = childSnapshot.key();
-                // console.log(key);
-                var childData = childSnapshot.val();
-                console.log(childData);
-                var stringObject =  JSON.stringify(childData);
-                alert(stringObject);
-            });
-            myDataRef.remove()
-        });
+        console.log(res3);
+        document.getElementById("yamContainer").style.display = "block";
+        document.getElementById("yamRec").value = res3;
+        document.getElementById("buttonWhite").style.display = "none";
+        document.getElementById("InputText").style.display = "none";
+        document.getElementById("wrapText").style.display = "block";
+
+        document.getElementById("Titel1").style.display = "none";  
+        document.getElementById("Titel2").style.display = "block";
+        document.getElementById("yamBack").style.display = "block";
+        document.getElementById("btUploadText").style.display = "none";
+
+
+        
+        
+        document.getElementById("buttonReceive").style.display = "none";
+        myDataRef.remove()
     }
-});
+    $scope.backToTalk = function(){
+        document.getElementById("yamContainer").style.display = "none";
+        document.getElementById("buttonWhite").style.display = "block";
+        document.getElementById("InputText").style.display = "none";
+        document.getElementById("wrapText").style.display = "none";
+
+        document.getElementById("Titel1").style.display = "block";  
+        document.getElementById("Titel2").style.display = "none";
+        document.getElementById("yamBack").style.display = "none";
+        document.getElementById("btUploadText").style.display = "block";
+
+    }
+
+    // var dataIsEmpty = document.getElementById("btReceive").innerHTML == "0";
+    // console.log(dataIsEmpty);
+    // if(dataIsEmpty){
+    //     console.log("btReceive = 0");
+    // }
+
+
+
+
+
+
+}); // end of js
 
