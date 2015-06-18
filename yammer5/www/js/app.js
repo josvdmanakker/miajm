@@ -1,6 +1,5 @@
 
 var app = angular.module('starter', ['ionic','ngCordova','starter.controllers'])
-
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -14,8 +13,6 @@ var app = angular.module('starter', ['ionic','ngCordova','starter.controllers'])
     }
   });
 })
-
-
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
   .state('app', {
@@ -24,7 +21,7 @@ var app = angular.module('starter', ['ionic','ngCordova','starter.controllers'])
     templateUrl: "templates/menu.html",
     controller: 'AppCtrl'
   })
-  
+
   .state('app.start', {
     url: "/start",
     views: {
@@ -75,7 +72,7 @@ var app = angular.module('starter', ['ionic','ngCordova','starter.controllers'])
       }
     }
   })
-  
+
 
   .state('app.search', {
     url: "/search",
@@ -113,18 +110,13 @@ var app = angular.module('starter', ['ionic','ngCordova','starter.controllers'])
       }
     }
   });
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/start');
-});
-
-
+    // if none of the above states are matched, use this as the fallback
+    $urlRouterProvider.otherwise('/app/start');
+  });
 app.controller('accelController', function($scope){
   document.addEventListener("deviceready", onDeviceReady, false);
+  // Cordova is ready
+  function onDeviceReady() {
 
-// Cordova is ready
-function onDeviceReady() {
-  
-}
-
-
+  }
 });

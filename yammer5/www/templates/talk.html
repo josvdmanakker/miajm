@@ -1,43 +1,31 @@
 <ion-view view-title="talk" on-swipe-right="goBack()">
-<ion-content id="talkback" scroll="false" >
-
-
-<h1 id="Titel1">Talk to us!</h1>
-<h1 id="Titel2">You received a yam!</h1>
-
-<div id="buttonReceive" ng-click="showYam();">
-  <div id="btReceive" class="buttonMid" class="button button-block button-positive center"></div>
-</div>
-
-<div id='buttonPlay' ng-click="playAudio()">
- <div  class="buttonMid" id="btPlay" class="button button-block button-positive center" ><img style="margin-top:-100px;margin-bottom: 15%; height:30px;width:30px;" src="img/audio.svg"></div>
-</div>
-
-<div class="centerCircle" id='buttonWhite' ng-click="switchType();">
-<div  class="buttonMid" id="buttonTalk" class="button button-block button-positive center" >T</div>
-</div>
-
-<!-- <div class="centerCircle" id='buttonWhite' on-hold="recordAudio()" on-release="stopRecord()">
- <div  class="buttonMid" id="buttonTalk" class="button button-block button-positive center" ><img style="margin-top:-30%;height:160px;width:160px;" src="img/microfoon.svg"></div>
-</div> -->
-<label class="item item-input" id="yamContainer" >
-Someone wants to say:
-<textarea readonly id="yamRec"> </textarea>
-</label>
-
-<label class="item item-input" id="InputText">
-  Start typing your story!
-  <textarea id="InputType" class="col-center" id="talkText" rows="10" cols="15" name="text" ng-model="$parent.talkText" ></textarea>
-</label>
-
-<div id='wrapText'>
-
- <div id='wrapper2'>
-   <button id="btUploadText" class="button button-block button-positive center"  ng-click="sendTextServer();" ui-sref="app.finish" disabled>Send text</button>
-   <button id="yamBack" class="button button-block button-positive center" ng-click="backToTalk();">Go Back</button>
- </div>
-</div>        	
-</form> 
-<p id="audio_position"></p>
-</ion-content>
+  <ion-content id="talkback" scroll="false" >
+  <h1 id="Titel1">Talk to us!</h1>
+  <h1 id="Titel2">You received a yam!</h1>
+  <div id="buttonReceive" ng-click="showYam();">
+    <div id="btReceive" class="buttonMid" class="button button-block button-positive center"></div>
+  </div>
+  <div id='buttonPlay' ng-click="playAudio()">
+   <div  class="buttonMid" id="btPlay" class="button button-block button-positive center" ><img style="margin-top:-100px;margin-bottom: 15%; height:30px;width:30px;" src="img/audio.svg"></div>
+  </div>
+  <div class="centerCircle" id='buttonWhite' ng-click="switchType();">
+    <div  class="buttonMid" id="buttonTalk" class="button button-block button-positive center" >T</div>
+  </div>
+  <label class="item item-input" id="yamContainer" >
+    Someone wants to say:
+    <textarea readonly id="yamRec"> </textarea>
+  </label>
+  <label class="item item-input" id="InputText">
+    Start typing your story!
+    <textarea id="InputType" class="col-center" id="talkText" rows="10" cols="15" name="text" ng-model="$parent.talkText" ></textarea>
+  </label>
+  <div id='wrapText'>
+   <div id='wrapper2'>
+     <button id="btUploadText" class="button button-block button-positive center"  ng-click="sendTextServer();" ui-sref="app.finish" disabled>Send text</button>
+     <button id="yamBack" class="button button-block button-positive center" ng-click="backToTalk();">Go Back</button>
+   </div>
+  </div>        	
+  </form> 
+  <p id="audio_position"></p>
+  </ion-content>
 </ion-view>
