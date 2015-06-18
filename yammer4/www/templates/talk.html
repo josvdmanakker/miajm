@@ -1,0 +1,43 @@
+<ion-view view-title="talk" on-swipe-right="goBack()">
+<ion-content id="talkback" scroll="false" >
+<h1 id="startTitel">Talk to us!</h1>
+<p class="centerText" >Hold the button to talk, or switch to type if you prefer to type</p>
+<div id='buttonPlay' ng-click="playAudio()">
+ <div  class="buttonMid" id="btPlay" class="button button-block button-positive center" ><img style="margin-top:-100px;margin-bottom: 15%; height:30px;width:30px;" src="img/audio.svg"></div>
+</div>
+<!-- <div id="spin"></div>
+<h1>Firepano</h1>
+<input class="hidden" type="file" accept="image/*" capture="camera" id="file-upload">
+<br/>
+<img class="pano" id="pano"> -->
+
+<div class="centerCircle" id='buttonWhite' on-hold="recordAudio()" on-release="stopRecord()">
+ <div  class="buttonMid" id="buttonTalk" class="button button-block button-positive center" ><img style="margin-top:-30%;height:160px;width:160px;" src="img/microfoon.svg"></div>
+</div>
+
+<label class="item item-input" id="InputText">
+  Start typing your story!
+  <textarea id="InputType" class="col-center" id="talkText" rows="10" cols="15" name="text" ng-model="$parent.talkText" ></textarea>
+</label>
+
+<div id='wrapperAudio'>
+  <div class="centerCircleSmall" id='switchType' ng-click="switchTypeBack();">
+   <div  class="buttonMid" id="btType" class="button button-block button-positive center" ><img style="margin-top:-100px;margin-bottom: 5%; height:40px;width:40px;" src="img/microfoon.svg"></div>
+ </div>
+ <div id='wrapper2'>
+   <button id="btUploadText" class="button button-block button-positive center"  ng-click="sendTextServer();" ui-sref="app.finish" disabled>Send text</button>
+ </div>
+</div>
+
+<div id='wrapperText'>
+  <div class="centerCircleSmall" id='switchTypeTalk' ng-click="switchType();">
+    <div  class="buttonMid" id="btTalk" class="button button-block button-positive center" ><img style="margin-top:-100px;margin-bottom: 5%; height:40px;width:40px;" src="img/type.svg"></div>
+  </div>
+  <div id='wrapper2'>
+    <button id="btUpload" class="button button-block button-positive center"  ng-click="sendAudio();">Send audio</button>
+  </div>
+</div>          	
+</form> 
+<p id="audio_position"></p>
+</ion-content>
+</ion-view>
